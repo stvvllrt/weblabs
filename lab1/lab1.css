@@ -1,0 +1,91 @@
+sup{
+    color: blue;
+}
+p{
+    font-family: "Inter", sans-serif;
+}
+h1{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+}
+h2{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+}
+.card{
+    font-family:sans-serif;
+    background-color: #f0f0f0;
+    padding: 4px 8px 4px 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 32px;
+}
+.logo{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+.red{
+    color: #c22222;
+}
+.rs{
+    color: #c22222;
+    text-decoration: line-through;
+}
+.navbar{
+    float: right;
+    font-family: "Inter", sans-serif;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.column-foot {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin: 15px;
+}
+.column-right{
+    align-items: flex-end;
+    text-align: right;
+}
+.button{
+    background-color: #515151;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.popular-bar{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: 15px;
+}
+.book-card{
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+
+}
+.book-img{
+    width: 200px;
+    height: 300px;
+}
+.link{
+    color: #113bdc;
+    text-decoration: underline;
+}
