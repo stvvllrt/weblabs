@@ -1,0 +1,220 @@
+sup{
+    color: blue;
+}
+p{
+    font-family: "Inter", sans-serif;
+}
+h1{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+}
+h2{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+}
+h3{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+}
+p{
+    font-family: "Inter", sans-serif;
+    margin: 15px;
+    text-wrap: wrap;
+}
+.logo{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+.navbar{
+    float: right;
+    font-family: "Inter", sans-serif;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.links a:hover{
+    color: #113bdc;
+}
+.column-foot {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    gap: 0;
+}
+.column-right{
+    align-items: flex-end;
+    text-align: right;
+    gap: 0;
+}
+.search-bar{
+
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.custom-button{
+    background-color: #515151;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button{
+    background-color: #515151;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.custom-button:hover{
+    transform: scale(1.05);
+    background: darkslategray;
+}
+button:hover {
+    transform: scale(1.05);
+    background: darkslategray;
+}
+.link{
+    color: #113bdc;
+    text-decoration: underline;
+}
+.book-short-body{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.gallery{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /*background: lightpink;*/
+
+}
+.summary{
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /*background: lightblue;*/
+    justify-content: center;
+    align-content: center;
+}
+.summary-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    width: 50%;
+    border: #515151 solid 3px;
+    border-radius: 20px;
+}
+.summary-content button{
+    margin: 15px;
+}
+.book-details-body{
+    background-color: lightgray;
+    border-radius: 15px;
+}
+.main-content{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.specs{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Центрирует по вертикали */
+}
+.reviews{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.review{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    width: 75%;
+}
+.main-pic{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.main-pic img {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.thumbnails img{
+    border-radius: 8px;
+}
+.thumb-link:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+}
+.book-specs {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.8;
+    font-family: sans-serif;
+    width: 50%;
+}
+
+.book-specs li {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-specs li strong {
+    color: #555;
+}

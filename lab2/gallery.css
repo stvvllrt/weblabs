@@ -1,0 +1,30 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main-view img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.thumb-link:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+}

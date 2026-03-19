@@ -1,0 +1,21 @@
+li{
+    height: 40px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.unchecked{
+    background: lightblue;
+}
+.checked{
+    background: lightgray;
+    text-decoration: line-through;
+}
+.delete{
+    padding: 0 5px 0 5px;
+    color: red;
+    font-weight: bold;
+}
+a{
+    padding: 0 10px 0 10px;
+}
