@@ -11,6 +11,29 @@ li{
     background: lightgray;
     text-decoration: line-through;
 }
+.unchecked::before{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background: red;
+    background: url("media/unchecked.png") no-repeat center;
+    background-size: contain;
+    content: "";
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.checked::before{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background: red;
+    background: url("media/checked.png") no-repeat center;
+    background-size: contain;
+    content: "";
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
 .delete{
     padding: 0 5px 0 5px;
     color: red;
