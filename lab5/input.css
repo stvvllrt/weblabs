@@ -1,0 +1,123 @@
+input:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+}
+input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+}
+input[type="radio"]{
+    accent-color: green;
+}
+input[value="+"]{
+    border: none;
+    background-color: darkolivegreen;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+input[value="-"]{
+    border: none;
+    background-color: indianred;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+input[value="active"]{
+    color: white;
+    background: green;
+    border: none;
+}
+input[value="hover1"]{
+    color: white;
+    background: mediumseagreen;
+    border: none;
+}
+input[value="hover1"]:hover{
+    color: white;
+    background: green;
+    border: none;
+}
+input[value="danger"]{
+    color: white;
+    background: indianred;
+    border: none;
+}
+input[value="hover2"]{
+    color: white;
+    background: indianred;
+    border: none;
+}
+input[value="hover2"]:hover{
+    color: white;
+    background: darkred;
+    border: none;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-label {
+    position: relative;
+    padding-left: 55px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: gray;
+    line-height: 24px;
+}
+.toggle-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.toggle-label::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: gray;
+    transition: all 0.2s ease;
+}
+.space{
+    width: 25px;
+}
+.toggle-input.green:checked + .toggle-label::before {
+    border-color: green;
+}
+.toggle-input.green:checked + .toggle-label::after {
+    transform: translate(22px, -50%);
+    background-color: green;
+}
+
+.toggle-input.red:checked + .toggle-label::before {
+    border-color: red;
+}
+.toggle-input.red:checked + .toggle-label::after {
+    transform: translate(22px, -50%);
+    background-color: red;
+}

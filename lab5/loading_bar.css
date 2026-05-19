@@ -1,0 +1,29 @@
+.container{
+    margin: 100px;
+    border: 5px solid orange;
+    height: 50px;
+    width: 600px;
+}
+.box{
+    background-color: orange;
+    height: 50px;
+    width: 50px;
+}
+.animation{
+    animation-name: movement;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+    from{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(550px,0);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}

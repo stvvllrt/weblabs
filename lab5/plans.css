@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    color: dimgray;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.plans__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 260px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.plan-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.plan-card::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.plan-card--enterprise::before { background: #d63384; }
+.plan-card--professional::before { background: #fd7e14; }
+.plan-card--standard::before { background: #0d6efd; }
+.plan-card--basic::before { background: #198754; }
+
+.plan-card__title {
+    margin: 20px 0 10px;
+    font-size: 1rem;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.plan-card__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plan-card__currency {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.plan-card__amount {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.plan-card__period {
+    color: darkgray;
+    font-size: 1rem;
+}
+
+.plan-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.plan-card__features li {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    font-size: 1rem;
+    color: gray;
+}
+
+.plan-card__button {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background 0.3s;
+}
+
+.plan-card__button--enterprise { background: deeppink; }
+.plan-card__button--professional { background: orange; }
+.plan-card__button--standard { background: dodgerblue; }
+.plan-card__button--basic { background: darkgreen; }
