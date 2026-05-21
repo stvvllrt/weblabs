@@ -1,111 +1,123 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="../lab2/site.css">
-    <link rel="stylesheet" href="info.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оплата и доставка - Библиотека</title>
+    <link rel="stylesheet" href="../lab5/library.css">
+    <link rel="stylesheet" href="info.css">
 </head>
-<body>
-<header>
-    <div class="header">
-        <a href="../lab1/site.html" class="logo custom-button">Библиотека</a>
-        <form class="search-bar">
-            <input type="search">
-            <button>Поиск</button>
-        </form>
-        <span class="navbar">
-            <a href="../lab1/site.html"><button >главная</button></a>
-      <a href="../lab3/info.html"><button>о нас</button></a>
-            <a href="../lab4/cathalog.html"><button>каталог</button></a>
-            <a href="../lab3/info.html"><button>контакты</button></a>
-    </span>
-    </div>
-</header>
-<hr>
-<main>
-    <section class="payment-methods">
-        <h2>Способы оплаты</h2>
-        <div class="payment-container">
-            <div class="payment-item card-payment">
-                <h3>Банковские карты</h3>
-                <p>Мы принимаем карты всех популярных платежных систем.</p>
-                <div class="icons">
-                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
-                    <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
-                    <img src="https://img.icons8.com/color/48/000000/mir.png" alt="MIR">
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <a href="../lab1/site.html" class="header__logo">Библиотека</a>
+            <form class="header__search">
+                <label for="search" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Поиск книг</label>
+                <input type="search" id="search" class="header__search-input" placeholder="Поиск книг...">
+                <button type="submit" class="header__search-button">Найти</button>
+            </form>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="../lab1/site.html" class="header__nav-link">главная</a></li>
+                    <li class="header__nav-item"><a href="../lab5/library.html" class="header__nav-link">каталог</a></li>
+                    <li class="header__nav-item"><a href="../lab3/info.html" class="header__nav-link header__nav-link_active">о нас</a></li>
+                    <li class="header__nav-item"><a href="../lab3/info.html" class="header__nav-link">контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <h1 class="catalog__title">Оплата и доставка</h1>
+
+            <section class="payment-methods" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 30px;">
+                <h2 class="catalog__title" style="font-size: 1.5rem;">Способы оплаты</h2>
+                <div class="payment-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div class="payment-item card-payment" style="flex: 1; min-width: 250px;">
+                        <h3>Банковские карты</h3>
+                        <p>Мы принимаем карты всех популярных платежных систем.</p>
+                        <div class="icons">
+                            <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                            <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+                            <img src="https://img.icons8.com/color/48/000000/mir.png" alt="MIR">
+                        </div>
+                    </div>
+
+                    <div class="payment-item online-payment" style="flex: 1; min-width: 250px;">
+                        <h3>Электронные платежи</h3>
+                        <p>Быстрая оплата через онлайн-сервисы.</p>
+                        <div class="icons">
+                            <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal">
+                        </div>
+                    </div>
+
+                    <div class="payment-item cash-payment" style="flex: 1; min-width: 250px;">
+                        <h3>Наличными при получении</h3>
+                        <p>Оплата курьеру или в пункте выдачи при осмотре товара.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="delivery-cost" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h2 class="catalog__title" style="font-size: 1.5rem;">Стоимость доставки</h2>
+                <table class="delivery-table" style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                    <thead>
+                        <tr style="background: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+                            <th style="padding: 12px; text-align: left;">Регион / Способ доставки</th>
+                            <th style="padding: 12px; text-align: left;">Срок доставки</th>
+                            <th style="padding: 12px; text-align: left;">Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;">Москва (в пределах МКАД)</td>
+                            <td style="padding: 12px;">1-2 дня</td>
+                            <td style="padding: 12px;">300 ₽</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;">Московская область</td>
+                            <td style="padding: 12px;">2-4 дня</td>
+                            <td style="padding: 12px;">500 ₽</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;">Санкт-Петербург</td>
+                            <td style="padding: 12px;">2-3 дня</td>
+                            <td style="padding: 12px;">400 ₽</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px;">Регионы России (Почта РФ)</td>
+                            <td style="padding: 12px;">5-14 дней</td>
+                            <td style="padding: 12px;">от 450 ₽</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;">Самовывоз из библиотеки</td>
+                            <td style="padding: 12px;">Сегодня</td>
+                            <td style="padding: 12px;">Бесплатно</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__contacts">
+                    <a href="mailto:office@library.com" class="footer__link">office@library.com</a>
+                    <a href="tel:+8(800)7778888" class="footer__link">+8(800)7778888</a>
+                </div>
+                <address class="footer__address">
+                    г. Москва, ул. Горького, д. 87А<br>
+                    Ежедневно: 9:00-18:00
+                </address>
+                <div class="footer__copy">
+                    2026 © Библиотека №1 им. Горького
                 </div>
             </div>
-
-            <div class="payment-item online-payment">
-                <h3>Электронные платежи</h3>
-                <p>Быстрая оплата через онлайн-сервисы.</p>
-                <div class="icons">
-                    <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal">
-                    </div>
-            </div>
-
-            <div class="payment-item cash-payment">
-                <h3>Наличными при получении</h3>
-                <p>Оплата курьеру или в пункте выдачи при осмотре товара.</p>
-            </div>
         </div>
-    </section>
-    <section class="delivery-cost">
-        <h2>Стоимость доставки</h2>
-        <table class="delivery-table">
-            <thead>
-                <tr>
-                    <th>Регион / Способ доставки</th>
-                    <th>Срок доставки</th>
-                    <th>Стоимость</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Москва (в пределах МКАД)</td>
-                    <td>1-2 дня</td>
-                    <td>300 ₽</td>
-                </tr>
-                <tr>
-                    <td>Московская область</td>
-                    <td>2-4 дня</td>
-                    <td>500 ₽</td>
-                </tr>
-                <tr>
-                    <td>Санкт-Петербург</td>
-                    <td>2-3 дня</td>
-                    <td>400 ₽</td>
-                </tr>
-                <tr>
-                    <td>Регионы России (Почта РФ)</td>
-                    <td>5-14 дней</td>
-                    <td>от 450 ₽</td>
-                </tr>
-                <tr>
-                    <td>Самовывоз из библиотеки</td>
-                    <td>Сегодня</td>
-                    <td>Бесплатно</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</main>
-<footer>
-    <hr>
-    <div class="foot">
-        <div class="links">
-            <a href="mailto:office@library.com">office@library.com</a>
-            <a href="tel:+8(800)7778888">+8(800)7778888</a>
-        </div>
-        <address>
-            г. Москва, ул. Горького, д. 87А<br>
-            Ежедневно<br>
-            9:00-18:00<br>
-        </address>
-    </div>
-    <div style="text-align: center; font-family: 'Inter', sans-serif"><b>2026 © Библиотека №1 им. Горького</b></div>
-</footer>
+    </footer>
 </body>
 </html>
 

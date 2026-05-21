@@ -249,6 +249,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     border: 0;
+
 }
 
 @media (max-width: 768px) {

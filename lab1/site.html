@@ -1,112 +1,156 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="lab1.css">
     <meta charset="UTF-8">
-    <title>Библиотека</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Библиотека</title>
+    <link rel="stylesheet" href="../lab5/library.css">
 </head>
-<header>
-  <div>
-    <a href="../lab1/site.html" class="logo button">Библиотека</a>
-      <form class="button">
-          <input  type="search">
-          <button>Поиск</button>
-      </form>
-    <span class="navbar">
-      <a href="../lab1/site.html" class="button">главная</a>
-      <a href="../lab3/info.html" class="button">о нас</a>
-      <a href="../lab4/cathalog.html" class="button">каталог</a>
-      <a href="../lab3/info.html" class="button">контакты</a>
-    </span>
-  </div>
-</header>
-<body>
-<h1>Добро пожаловать на главную страницу Библиотеки!</h1>
-<section>
-    <h2>Популярные товары:</h2>
-    <div class="popular-bar">
-        <article class="book-card">
-            <img class="book-img" src="media/1.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: 500 руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/1.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: 500 руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/1.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: 500 руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/1.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: 500 руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-    </div>
-</section>
-<section>
-    <h2>Специальные предложения:</h2>
-    <div class="popular-bar">
-        <article class="book-card">
-            <img class="book-img" src="media/2.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: <b class="rs">500 руб.</b> 400руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/2.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: <b class="rs">500 руб.</b> 400руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/2.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: <b class="rs">500 руб.</b> 400руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-        <article class="book-card">
-            <img class="book-img" src="media/2.webp" alt="Book">
-            <h2><b>Название книги</b></h2>
-            <i>Краткое описание книги</i>
-            <p>Цена: <b class="rs">500 руб.</b> 400руб.</p>
-            <button class="button">Добавить в корзину</button>
-        </article>
-    </div>
-</section>
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <a href="../lab1/site.html" class="header__logo">Библиотека</a>
+            <form class="header__search">
+                <label for="search" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Поиск книг</label>
+                <input type="search" id="search" class="header__search-input" placeholder="Поиск книг...">
+                <button type="submit" class="header__search-button">Найти</button>
+            </form>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="../lab1/site.html" class="header__nav-link header__nav-link_active">главная</a></li>
+                    <li class="header__nav-item"><a href="../lab5/library.html" class="header__nav-link">каталог</a></li>
+                    <li class="header__nav-item"><a href="../lab3/info.html" class="header__nav-link">о нас</a></li>
+                    <li class="header__nav-item"><a href="../lab3/info.html" class="header__nav-link">контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <h1 class="catalog__title">Добро пожаловать в нашу Библиотеку!</h1>
+
+            <section class="catalog">
+                <h2 class="catalog__title">Популярные книги</h2>
+                <div class="catalog__grid">
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/1.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">500 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/1.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">500 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/1.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">500 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/1.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">500 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="catalog" style="margin-top: 40px;">
+                <h2 class="catalog__title">Специальные предложения</h2>
+                <div class="catalog__grid">
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/2.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">400 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/2.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">400 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image-container">
+                            <a href="../lab2/site.html"><img src="media/2.webp" alt="Книга" class="product__image"></a>
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title"><a href="../lab2/site.html" style="text-decoration: none; color: inherit;">Книга</a></h3>
+                            <p class="product__desc">Уникальное издание, собравшее в себе лучшие труды классиков мировой литературы.</p>
+                            <div class="product__footer">
+                                <span class="product__price">400 ₽</span>
+                                <button class="product__buy">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__contacts">
+                    <a href="mailto:office@library.com" class="footer__link">office@library.com</a>
+                    <a href="tel:+8(800)7778888" class="footer__link">+8(800)7778888</a>
+                </div>
+                <address class="footer__address">
+                    г. Москва, ул. Горького, д. 87А<br>
+                    Ежедневно: 9:00-18:00
+                </address>
+                <div class="footer__copy">
+                    2026 © Библиотека №1 им. Горького
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-<footer>
-    <hr>
-    <div class="foot">
-    <div class="column-foot">
-      <a>Главная</a>
-      <a>О нас</a>
-      <a>Каталог</a>
-      <a>Контакты</a>
-      <a>Корзина</a>
-    </div>
-    <div class="column-foot column-right">
-        Библиотека №1 им. Горького<br>
-        <div class="link">+8(800)7778888</div>
-        г. Москва, ул. Горького, д. 87А<br>
-        Ежедневно<br>
-        9:00-18:00<br>
-    </div>
-</div>
-    <div style="text-align: center; font-family: 'Inter', sans-serif"><b>2026 © Библиотека №1 им. Горького</b></div>
-</footer>
 </html>
